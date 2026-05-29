@@ -1,6 +1,8 @@
 <?php
 // File ini bisa di-include di setiap halaman untuk mengecek session
 function checkUserSession($conn) {
+    global $conn_type;
+    
     if(!isset($_SESSION['user_id'])) {
         return false;
     }
